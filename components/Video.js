@@ -50,7 +50,7 @@ class Video extends Component {
         this.setState({
           peerIds: [...peerIds, data.uid],        //add peer ID to state array
         });
-      }
+      } // très bien
     });
     RtcEngine.on('userOffline', (data) => {       //If user leaves
       this.setState({
