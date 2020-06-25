@@ -149,7 +149,7 @@ class Video extends Component {
               : 
 
               <View>
-              <Text>No hay usuarios conectados</Text>
+              <Text>Ningún usuario conectado</Text>
               </View>
               
         }
