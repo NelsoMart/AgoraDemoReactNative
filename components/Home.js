@@ -1,5 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
+
 import React, { Component } from 'react';    
 import { View, StyleSheet, Text, TextInput, TouchableOpacity, Platform } from 'react-native';
 import { Actions } from 'react-native-router-flux';
@@ -11,7 +12,7 @@ class Home extends Component {
     super(props);       
     this.state = {
       AppID: 'dfbf465dc527467ab5cd363b7ba5d2c5',                    //Set your APPID here
-      ChannelName: 'TecnologiaNel',                                  //Set a default channel or leave blank
+      ChannelName: 'Nombre canal',                                  //Set a default channel or leave blank
     };
     if (Platform.OS === 'android') {                    //Request required permissions from Android
       requestCameraAndAudioPermission().then(_ => {
@@ -51,7 +52,7 @@ class Home extends Component {
             onPress={this.handleSubmit}
             style={styles.submitButton}
           >
-            <Text style={{ color: '#ffffff' }}> Iniciar VideoLLamada </Text>
+            <Text style={{ color: '#ffffff' }}> Iniciar Video llamada </Text>
           </TouchableOpacity>
         </View>
       </View>
