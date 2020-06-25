@@ -31,7 +31,7 @@ class Home extends Component {
     }
   }
   render() {
-    return ( //! Formulario
+    return ( //! Formulario de inicio
       <View style={styles.container}>
         <Text style={styles.formLabel}>App ID</Text>
         <TextInput
