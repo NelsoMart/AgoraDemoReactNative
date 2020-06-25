@@ -5,7 +5,7 @@ import { View, StyleSheet, Text, TextInput, TouchableOpacity, Platform } from 'r
 import { Actions } from 'react-native-router-flux';
 import requestCameraAndAudioPermission from './permission';
 
-class Home extends Component {   
+class Home extends Component {       
 
   constructor(props) {         
     super(props);       
