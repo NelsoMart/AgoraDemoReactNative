@@ -28,7 +28,7 @@ export class Principal extends PureComponent {
                 style={styles.TouchableOpacityStyle} 
                  
                 >
-                    <Text>
+                    <Text style={styles.TextStyle}>
                         Ingresar
                     </Text>
                 </TouchableOpacity>
@@ -51,6 +51,12 @@ const styles = StyleSheet.create({
         width: '90%',
         // position: 'absolute',
         backgroundColor: '#00bcd4',
+      },
+
+      TextStyle: {
+        color: '#fff',
+        textAlign: 'center',
+        alignSelf: 'center',
       },
 
 })
