@@ -20,7 +20,8 @@ export class Principal extends PureComponent {
     render() {
         return (
             <View style= {{flex:1}}>
-                <Text> Esta es la interfaz inicial de Agora </Text>
+                <Text style={{marginTop:20, alignSelf:"center"}}
+                > Pronto aquí irá la pantalla de registro de usuarios </Text>
                 <TouchableOpacity 
                 title="Ingrear a Home"
                 onPress={this.entrar}
