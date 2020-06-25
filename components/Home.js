@@ -1,13 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import React, { Component } from 'react';
+import React, { Component } from 'react';    
 import { View, StyleSheet, Text, TextInput, TouchableOpacity, Platform } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import requestCameraAndAudioPermission from './permission';
 
-class Home extends Component {
+class Home extends Component {   
 
-  constructor(props) {     
+  constructor(props) {         
     super(props);       
     this.state = {
       AppID: 'dfbf465dc527467ab5cd363b7ba5d2c5',                    //Set your APPID here

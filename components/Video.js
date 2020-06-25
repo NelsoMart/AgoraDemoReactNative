@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 
-import React, { Component } from 'react';
+import React, { Component } from 'react';   
 import { View, StyleSheet, NativeModules, ScrollView, Text, Dimensions, TouchableOpacity } from 'react-native';
 import { RtcEngine, AgoraView } from 'react-native-agora';
 import Icon from 'react-native-vector-icons/MaterialIcons';
