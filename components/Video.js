@@ -154,7 +154,7 @@ class Video extends Component {
               
         }
         {
-          !this.state.vidMute                                              //view for local video
+          !this.state.vidMute                                               //view for local video
             ? <AgoraView style={styles.localVideoStyle} zOrderMediaOverlay={true} showLocalVideo={true} mode={1} />
             : <View />
         }

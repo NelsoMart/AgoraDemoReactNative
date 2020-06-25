@@ -1,7 +1,7 @@
 
 import 'react-native-gesture-handler';
 
-import {AppRegistry} from 'react-native';
+import {AppRegistry} from 'react-native';  
 import RouterComponent from './components/Router';
 import {name as appName} from './app.json';
 

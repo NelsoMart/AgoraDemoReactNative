@@ -7,7 +7,7 @@ import requestCameraAndAudioPermission from './permission';
 
 class Home extends Component {       
 
-  constructor(props) {         
+  constructor(props) {          
     super(props);       
     this.state = {
       AppID: 'dfbf465dc527467ab5cd363b7ba5d2c5',                    //Set your APPID here

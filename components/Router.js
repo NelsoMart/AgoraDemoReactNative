@@ -4,7 +4,7 @@ import React from 'react';
 import Video from './Video';
 import Home from './Home';
 
-const RouterComponent = () => (
+const RouterComponent = () => ( 
 	<Router>
 		<Scene>
 			<Scene key="home" component={Home} title="Agora Video Call" initial type={ActionConst.RESET} />
