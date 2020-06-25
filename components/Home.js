@@ -51,7 +51,7 @@ class Home extends Component {
             onPress={this.handleSubmit}
             style={styles.submitButton}
           >
-            <Text style={{ color: '#ffffff' }}> Iniciar LLamada </Text>
+            <Text style={{ color: '#ffffff' }}> Iniciar VideoLLamada </Text>
           </TouchableOpacity>
         </View>
       </View>
