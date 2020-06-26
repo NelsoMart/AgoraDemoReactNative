@@ -36,7 +36,7 @@ class Home extends Component {
       <View style={styles.container}>
         <Text style={styles.formLabel}>App ID</Text>
         <TextInput
-          style={styles.formInput}
+          style={[styles.formInput, {color:'#0093E1'}]}
           onChangeText={(AppID) => this.setState({ AppID })}
           value={this.state.AppID}
         />

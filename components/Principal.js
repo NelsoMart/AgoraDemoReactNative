@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         marginTop: 15,
         width: '90%',
         // position: 'absolute',
-        backgroundColor: '#00bcd4',
+        backgroundColor: '#00bcd9',
       },
 
       TextStyle: {
