@@ -33,7 +33,7 @@ class Home extends Component {
   }
   render() {
     return ( //! Formulario de inicio
-      <View style={styles.container}>
+      <View style={styles.container}>   
         <Text style={styles.formLabel}>App ID</Text>
         <TextInput
           style={[styles.formInput, {color:'green'}]}  
@@ -52,7 +52,7 @@ class Home extends Component {
             onPress={this.handleSubmit}
             style={styles.submitButton}
           >
-            <Text style={{ color: '#ffffff' }}> Iniciar Video llamada </Text>
+            <Text style={{ color: '#ffffff' }}> Iniciar Videollamada </Text>
           </TouchableOpacity>
         </View>
       </View>

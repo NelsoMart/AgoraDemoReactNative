@@ -1,6 +1,8 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable quotes */
 import { PermissionsAndroid } from "react-native";
+
+//! RECORDATORIO: PONER EN MAYÚSCULA EL NOMBRE DE ESTE ARCHIVO
 /**
  * @name requestCameraAndAudioPermission
  * @description Function to request permission for Audio and Camera
