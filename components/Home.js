@@ -33,7 +33,15 @@ class Home extends Component {
   }
   render() {
     return ( //! Formulario de inicio
-      <View style={styles.container}>   
+
+      <View style={{flex:1}}> 
+
+      <View style={{alignSelf:'flex-end'}}>
+      <Text style={{paddingRight:20, color:'grey'}}>Bienvenido</Text> 
+      </View>
+      
+      <View style={styles.container} >
+      
         <Text style={styles.formLabel}>App ID</Text>
         <TextInput
           style={[styles.formInput, {color:'green'}]}  
@@ -55,16 +63,18 @@ class Home extends Component {
             <Text style={{ color: '#ffffff' }}> Iniciar Videollamada </Text>
           </TouchableOpacity>
         </View>
-      </View>
+     </View>
+   </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
+   justifyContent: 'center',
     marginTop: 0,
-    padding: 20,
+    paddingTop:0,
+    padding: 20,  
     flex: 1,
     backgroundColor: '#ffffff',
   },

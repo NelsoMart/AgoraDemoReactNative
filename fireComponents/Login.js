@@ -2,7 +2,8 @@
 
 import React, { Component } from 'react';
 
-import { StyleSheet, Text, View, TextInput, Button, Alert, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView,
+         Button, Alert, ActivityIndicator } from 'react-native';
 
 import firebase from '../fireDatabase/firebase'; //? Para el Login
 
@@ -17,6 +18,7 @@ export default class Login extends Component {
   constructor() {
     super();
     this.state = { 
+      // nombre: '', //era para intentar enviar el nombre de usuario a pantalla Home
       email: '', 
       password: '',
       isLoading: false
@@ -30,6 +32,9 @@ export default class Login extends Component {
   }
 
   userLogin = () => {
+
+    // let nombreUsuario = this.state.nombre;
+
     if(this.state.email === '' && this.state.password === '') {
       Alert.alert('Enter details to signin!')
     } else {
@@ -49,6 +54,7 @@ export default class Login extends Component {
         })
         // this.Go_Dasboard
         // Actions.dashboard();
+        // Actions.home({nombreUsuario});
         Actions.home();
       })
       .catch(error => this.setState({ errorMessage: error.message }))
@@ -72,10 +78,11 @@ Go_Dasboard = () => {
       )
     }    
     return (
+     <ScrollView>
       <View style={styles.container}>  
         <TextInput
           style={styles.inputStyle}
-          placeholder="Email"
+          placeholder="E-mail"
           value={this.state.email}
           onChangeText={(val) => this.updateInputVal(val, 'email')}
         />
@@ -90,6 +97,7 @@ Go_Dasboard = () => {
         /> */}
 
         <PasswordInputText 
+            style={{marginBottom:'15%'}}
             value={this.state.inputStyle}
             placeholder="Contraseña"
             maxLength={15}
@@ -98,16 +106,17 @@ Go_Dasboard = () => {
 
         <Button
           color="#3740FE"
-          title="Signin"
+          title="Ingresar"
           onPress={() => this.userLogin()}
         />   
 
         <Text 
           style={styles.loginText}
           onPress={this.Go_Signup}>     
-¿No tienes cuenta? Haga clic aquí para registrarte
+             ¿No tienes cuenta? Haz clic aquí para registrarte
         </Text>                          
       </View>
+      </ScrollView>
     );
   }
 }

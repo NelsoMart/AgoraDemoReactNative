@@ -100,6 +100,7 @@ export default class Signup extends Component {
         />  */}
 
          <PasswordInputText 
+         style={{marginBottom:'15%'}}
             value={this.state.password}
             placeholder="Contraseña"
             maxLength={15}
@@ -109,7 +110,7 @@ export default class Signup extends Component {
                 
         <Button
           color="#3740FE"
-          title="Signup"
+          title="Regístrate"
           onPress={
            () => this.registerUser()
             // this.Go_Login
@@ -119,7 +120,7 @@ export default class Signup extends Component {
         <Text 
           style={styles.loginText}
           onPress={this.Go_Login}>
-       ¿Ya registrado? Haga clic aquí para ingresar
+       ¿Ya registrado? Haz clic aquí para ingresar
         </Text>   
       </View>
       </ScrollView>                       

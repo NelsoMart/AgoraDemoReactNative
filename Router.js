@@ -11,11 +11,11 @@ import Signup from './fireComponents/Signup';
  import Login from './fireComponents/Login';
  import Dashboard from './fireComponents/Dashboard'; //! quitar
 
-const RouterComponent = () => ( 
+const RouterComponent = () => (   
 	<Router>
 		<Scene>
-		<Scene key="signup" component={Signup} title="Crea tu Cuenta" initial type={ActionConst.RESET} />
-		<Scene key="login" component={Login} title="Iniar Cesión"  type={ActionConst.RESET} />
+		<Scene key="signup" component={Signup} title="Crea tu cuenta" initial type={ActionConst.RESET} />
+		<Scene key="login" component={Login} title="Iniciar cesión"  type={ActionConst.RESET} />
 		<Scene key="dashboard" component={Dashboard} title="This is Dashboard"  type={ActionConst.RESET} />
 	     	<Scene key="principal" component={Principal} title="Bienvenido a MedicApp"  type={ActionConst.RESET} />
 			<Scene key="home" component={Home} title="Video llamadas Agora" /*initial*/ type={ActionConst.RESET} />
