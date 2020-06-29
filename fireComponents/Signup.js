@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import { StyleSheet, Text, View, ScrollView,
+import { StyleSheet, Text, View, ScrollView, AsyncStorage,
   TextInput, Button, Alert, ActivityIndicator } from 'react-native';
 
 import firebase from '../fireDatabase/firebase'; //? Para el Login
@@ -18,12 +18,22 @@ export default class Signup extends Component {
   
   constructor() {
     super();
+
     this.state = { 
       displayName: '',
       email: '', 
       password: '',
       isLoading: false,
       myPassword: '', //para el textInput
+    }
+
+  }
+
+  userToken = async (displayName) => { // para insertar el nombre del usuario en el almacenamiento local.
+    try {
+       await AsyncStorage.setItem("key", JSON.stringify(displayName));
+    } catch (error) {
+      console.log("Something went wrong", error);
     }
   }
 
@@ -34,8 +44,10 @@ export default class Signup extends Component {
   }
 
   registerUser = () => {
+    const {displayName} = this.state;
+
     if(this.state.email === '' && this.state.password === '') {
-      Alert.alert('Enter details to signup!')
+      Alert.alert('¡Debes llenar todos los campos!')
     } else {
       this.setState({
         isLoading: true,
@@ -51,11 +63,13 @@ export default class Signup extends Component {
         console.log('Usuario registrado exitosamente!')
         this.setState({
           isLoading: false,
-          displayName: '',
-          email: '', 
-          password: ''
+          // displayName: '', //? se vacíaba porque había otra navegación
+          // email: '',       //? se vacíaba porque había otra navegación
+          // password: ''     //? se vacíaba porque había otra navegación
         })
         // this.Go_Login
+        this.userToken(displayName);
+        console.log(displayName);
         Actions.login();
       })
       .catch(error => this.setState({ errorMessage: error.message }))      

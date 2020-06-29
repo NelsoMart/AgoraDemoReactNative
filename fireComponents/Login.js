@@ -36,11 +36,12 @@ export default class Login extends Component {
     // let nombreUsuario = this.state.nombre;
 
     if(this.state.email === '' && this.state.password === '') {
-      Alert.alert('Enter details to signin!')
+      Alert.alert('¡Debes llenar todos los campos!')
     } else {
       this.setState({
         isLoading: true,
       })
+      let correo = this.state.email
       firebase
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
@@ -55,7 +56,7 @@ export default class Login extends Component {
         // this.Go_Dasboard
         // Actions.dashboard();
         // Actions.home({nombreUsuario});
-        Actions.home();
+        Actions.home({correo});
       })
       .catch(error => this.setState({ errorMessage: error.message }))
     }
@@ -65,9 +66,9 @@ export default class Login extends Component {
     Actions.signup(); 
 }
   
-Go_Dasboard = () => { 
-  Actions.dashboard(); 
-}
+// Go_Dasboard = () => { 
+//   Actions.dashboard(); 
+// }
 
   render() {
     if(this.state.isLoading){
@@ -125,7 +126,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     display: "flex",
-    flexDirection: "column",
+    marginTop: '10%',
+   flexDirection: "column",
     justifyContent: "center",
     padding: 35,
     backgroundColor: '#fff'
