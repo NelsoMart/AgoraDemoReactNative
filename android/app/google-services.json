@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "592148676936",
+    "firebase_url": "https://sesion-7f627.firebaseio.com",
+    "project_id": "sesion-7f627",
+    "storage_bucket": "sesion-7f627.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592148676936:android:e13bd425b4a9ada402b37d",
+        "android_client_info": {
+          "package_name": "com.agorademoreactnative"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592148676936-jclosv0115t2iqunjbskhfjtocgja4qm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.agorademoreactnative",
+            "certificate_hash": "f078de41ebe6286f233e568090dba50ddfee95e8"
+          }
+        },
+        {
+          "client_id": "592148676936-cr43atf3fpig3aqknldu2t7dri0lrdds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9DJVy9o_M60SkpXGktSqDN0l-ttRr7PI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592148676936-r6jtdef9hnpkug57bqm52mknpfu1hruq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -190,6 +190,7 @@ android {
 }
 
 dependencies {
+    implementation project(':@react-native-community_google-signin')
     implementation project(':react-native-agora')
     implementation project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -212,3 +213,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply plugin: 'com.google.gms.google-services' //! Agrega esta linea hasta el final

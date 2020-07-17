@@ -31,6 +31,8 @@ target 'AgoraDemoReactNative' do
 
   pod 'react-native-agora', :path => '../node_modules/react-native-agora'
 
+  pod 'RNGoogleSignin', :path => '../node_modules/@react-native-community/google-signin'
+
   target 'AgoraDemoReactNativeTests' do
     inherit! :search_paths
     # Pods for testing

@@ -65,6 +65,10 @@ export default class Login extends Component {
   Go_Signup = () => { 
     Actions.signup(); 
 }
+
+Go_Initial = () => { // este método es único porque en ambos casos se navega hascia Login
+  Actions.pantalladeregistro(); //* login está bien aquí; no es un duplicado
+}
   
 // Go_Dasboard = () => { 
 //   Actions.dashboard(); 
@@ -115,7 +119,14 @@ export default class Login extends Component {
           style={styles.loginText}
           onPress={this.Go_Signup}>     
              ¿No tienes cuenta? Haz clic aquí para registrarte
-        </Text>                          
+        </Text> 
+
+        <Text 
+          style={styles.textGoInitial}
+          onPress={this.Go_Initial}>
+             Elegir otro método
+        </Text> 
+
       </View>
       </ScrollView>
     );
@@ -144,6 +155,12 @@ const styles = StyleSheet.create({
     color: '#3740FE',
     marginTop: 25,
     textAlign: 'center'
+  },
+  textGoInitial: {
+    color: 'grey',
+    marginTop: 27,
+    textAlign: 'center',
+    paddingTop:15
   },
   preloader: {
     left: 0,
